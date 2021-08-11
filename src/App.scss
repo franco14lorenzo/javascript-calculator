@@ -1,0 +1,120 @@
+.App {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  text-align: center;
+  font-family: "Padauk", sans-serif;
+  #calculator {
+    box-shadow: 5px 5px 50px rgb(32, 32, 32);
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 400px;
+    background-color: #747f88;
+
+    #display {
+      font-family: "Orbitron", sans-serif;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 5px;
+      width: 100%;
+      height: 25%;
+      color: black;
+      background-color: #b7f4ff;
+      width: calc(100% - 20px);
+      margin-bottom: 3px;
+      #input {
+        font-size: 16px;
+        width: 100%;
+        overflow-wrap: anywhere;
+        text-align: left;
+      }
+      #output {
+        display: flex;
+        overflow-wrap: anywhere;
+        align-items: flex-end;
+        justify-content: flex-end;
+        width: 100%;
+      }
+    }
+
+    #buttons {
+      border-radius: 5px;
+      height: 75%;
+      width: 100%;
+      color: #3f4549;
+      background-color: #747f88;
+      display: grid;
+      cursor: pointer;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+        "clear clear divide multiply"
+        "seven eight nine subtract"
+        "four five six add"
+        "one two three equals"
+        "zero zero decimal equals";
+
+      #clear {
+        grid-area: clear;
+        background-color: #c9013d;
+        color: white;
+      }
+      #zero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-area: zero;
+      }
+      #equals {
+        color: white;
+        background-color: #134685;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-area: equals;
+      }
+      .button {
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #cad2d9;
+        border: solid 1px #5e656c;
+      }
+      .button:hover {
+        opacity: 0.7;
+      }
+      .op {
+        color: white;
+        background-color: #3f4549;
+      }
+    }
+  }
+  .footer {
+    font-size: 0.6em !important;
+    display: block;
+    margin: 15px auto 30px auto;
+    font-weight: 300;
+    color: #fff;
+    font-size: 0.8em;
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+    a:hover {
+      opacity: 0.85;
+    }
+  }
+}
