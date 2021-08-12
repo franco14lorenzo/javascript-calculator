@@ -42,7 +42,7 @@
       }
       #output {
         display: flex;
-        overflow-wrap: anywhere;
+        word-break: break-all;
         align-items: flex-end;
         justify-content: flex-end;
         width: 100%;
